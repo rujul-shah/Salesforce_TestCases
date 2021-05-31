@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-05-31T22:35:25Z" name="Suite" finished-at="2021-05-31T22:36:00Z" duration-ms="34238">
+    <groups>
+    </groups>
+    <test started-at="2021-05-31T22:35:25Z" name="Test" finished-at="2021-05-31T22:36:00Z" duration-ms="34238">
+      <class name="TestCases.VerifyLogin">
+        <test-method is-config="true" signature="initReport()[pri:0, instance:TestCases.VerifyLogin@5b3f61ff]" started-at="2021-05-31T15:35:25Z" name="initReport" finished-at="2021-05-31T15:35:26Z" duration-ms="489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initReport -->
+        <test-method is-config="true" signature="createReport(java.lang.reflect.Method)[pri:0, instance:TestCases.VerifyLogin@5b3f61ff]" started-at="2021-05-31T15:35:26Z" name="createReport" finished-at="2021-05-31T15:35:26Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCases.VerifyLogin.testCase01(java.lang.String) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createReport -->
+        <test-method signature="testCase01(java.lang.String)[pri:0, instance:TestCases.VerifyLogin@5b3f61ff]" started-at="2021-05-31T15:35:26Z" name="testCase01" finished-at="2021-05-31T15:35:32Z" duration-ms="6341" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase01 -->
+        <test-method is-config="true" signature="closure()[pri:0, instance:TestCases.VerifyLogin@5b3f61ff]" started-at="2021-05-31T15:35:32Z" name="closure" finished-at="2021-05-31T15:35:38Z" duration-ms="5196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closure -->
+        <test-method is-config="true" signature="createReport(java.lang.reflect.Method)[pri:0, instance:TestCases.VerifyLogin@5b3f61ff]" started-at="2021-05-31T15:35:38Z" name="createReport" finished-at="2021-05-31T15:35:38Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCases.VerifyLogin.testCase02(java.lang.String) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createReport -->
+        <test-method signature="testCase02(java.lang.String)[pri:0, instance:TestCases.VerifyLogin@5b3f61ff]" started-at="2021-05-31T15:35:38Z" name="testCase02" finished-at="2021-05-31T15:35:54Z" duration-ms="16542" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase02 -->
+        <test-method is-config="true" signature="closure()[pri:0, instance:TestCases.VerifyLogin@5b3f61ff]" started-at="2021-05-31T15:35:54Z" name="closure" finished-at="2021-05-31T15:35:59Z" duration-ms="5258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closure -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.VerifyLogin@5b3f61ff]" started-at="2021-05-31T15:35:59Z" name="teardown" finished-at="2021-05-31T15:36:00Z" duration-ms="377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.VerifyLogin -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

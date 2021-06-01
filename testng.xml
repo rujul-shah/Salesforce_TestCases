@@ -4,10 +4,10 @@
   <test thread-count="5" name="Test">
   <parameter name="BrowserName" value="Chrome"></parameter>
     <classes>
-    <!--  <class name="TestCases.VerifyLogin">
-      <methods><include name="testCase04"></include>
-      </methods>
-      </class>-->
+    <class name="TestCases.VerifyLogin">
+      <!--<methods><include name="testCase04"></include>
+      </methods>-->
+      </class>
       <class name="TestCases.Usermenudropdown">
       
       </class>

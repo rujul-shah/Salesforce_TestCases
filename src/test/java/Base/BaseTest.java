@@ -24,7 +24,9 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
+import Pages.accountPage;
 import Pages.loginPage;
+import Pages.userMenu;
 import Utilities.AppConstants;
 import Utilities.CommonUtilities;
 import Utilities.DataUtilities;
@@ -43,6 +45,8 @@ public class BaseTest {
 	public CommonUtilities objCommon = new CommonUtilities();
 	public DataUtilities objData = new DataUtilities();
 	public static loginPage lp;
+	public static accountPage ap;
+	public static userMenu um1;
 	
 	public WebDriver getBrowser(String sBrowsername) throws IOException
 	{
@@ -65,7 +69,7 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		driver.get(objData.ReadPageURL("Salesforce.HomePage"));
 		lp=new loginPage(driver);
-	//	lp= new loginPage(driver);
+		
 		return driver;
 		
 	}

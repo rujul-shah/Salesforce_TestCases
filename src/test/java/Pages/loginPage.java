@@ -22,5 +22,26 @@ public class loginPage {
 	
 	@FindBy(id="error")
 	public WebElement error;
+	
+	@FindBy(xpath = "//*[@id='rememberUn']")
+	public WebElement rememberMe;
+	
+	@FindBy(id="forgot_password_link")
+	public WebElement forgotPassword;
 
+	@FindBy(xpath = "//*[@id='un']")
+	public WebElement fUname;
+	
+	@FindBy(id="continue")
+	public WebElement fContinue;
+	
+	@FindBy(xpath = "//*[@id='forgotPassForm']/div/p[1]")
+	public WebElement fMessage;
+	
+	@FindBy(xpath="//span[@id='userNavLabel']")
+	public WebElement userNavlable;
+	
+	@FindBy(xpath="//a[@title='Logout']")
+	public WebElement logOut;
+	
 }

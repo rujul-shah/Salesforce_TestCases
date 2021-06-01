@@ -22,10 +22,10 @@ public class VerifyLogin extends BaseTest {
 		sa=new SoftAssert();
 		driver=getBrowser(sBrowserName);
 		lp=new loginPage(driver);
-		lp.username.sendKeys(objData.ReadExcelData()[0]);
+		objCommon.enterText(lp.username,objData.ReadExcelData()[0],"Username");
 		lp.password.clear();
-		lp.login.click();
-		objCommon.waitForElement(lp.error, "Error Text");
+		objCommon.onClick(lp.login, "Login Button");
+		objCommon.waitForElement(lp.error);
 		sa.assertEquals(lp.error.getText(), "Please enter your password.");
 		test.pass("Test Case01 Passed.");
 		sa.assertAll();
@@ -44,6 +44,42 @@ public class VerifyLogin extends BaseTest {
 		System.out.println(driver.getTitle());
 		test.info("Login Success");
 		sa.assertAll();
+	}
+	
+	@Parameters({"BrowserName"})
+	@Test
+	public void testCase03(String sBrowserName) throws IOException, InterruptedException
+	{
+		sa=new SoftAssert();
+		driver=getBrowser(sBrowserName);
+		lp=new loginPage(driver);
+		objCommon.waitForElement(lp.rememberMe);
+		objCommon.onClick(lp.rememberMe, "Remember ME");
+		lp.rememberMe.click();
+		objCommon.login();
+		Thread.sleep(5000);
+		objCommon.logout();
+		objCommon.waitForElement(lp.username);
+		if(lp.rememberMe.isSelected())
+			test.pass("Testcase 3 success");
+	}
+	
+	@Parameters({"BrowserName"})
+	@Test
+	public void testCase04(String sBrowserName) throws IOException, InterruptedException
+	{
+		sa=new SoftAssert();
+		driver=getBrowser(sBrowserName);
+		lp=new loginPage(driver);
+		objCommon.waitForElement(lp.forgotPassword);
+		objCommon.onClick(lp.forgotPassword, "Forgot Password");
+		Thread.sleep(1000);
+		objCommon.enterText(lp.fUname, objData.ReadExcelData()[0], "Username from Forget password.");
+		objCommon.onClick(lp.fContinue, "Continue");
+		String str1="We’ve sent you an email with a link to finish resetting your password.";
+		sa.assertEquals(lp.fMessage.getText(), str1);
+		test.pass("Testcase 4 success");
+		
 	}
 	
 

@@ -51,7 +51,7 @@ public class CommonUtilities {
 		else
 			BaseTest.test.log(Status.INFO,elementName + "didnt display.");
 	}
-	public boolean waitForElement(WebElement element, String elementName)
+	public boolean waitForElement(WebElement element)
 	{
 		try {
 			WebDriverWait wait = new WebDriverWait(BaseTest.driver, 20);
@@ -74,11 +74,19 @@ public class CommonUtilities {
 		DataUtilities objData = new DataUtilities();
 		String[] creds = new String[2];
 		creds= objData.ReadExcelData();
-		BaseTest.lp.username.sendKeys(creds[0]);
-		BaseTest.lp.password.sendKeys(creds[1]);
-		BaseTest.lp.login.click();
+		enterText(BaseTest.lp.username, creds[0], "Username");
+		enterText(BaseTest.lp.password, creds[1], "Password");
+		onClick(BaseTest.lp.login, "Login Button");
+		
 		BaseTest.test.pass("Login Success");
+			
+	}
+	public void logout()
+	{
+		waitForElement(BaseTest.lp.userNavlable);
+		onClick(BaseTest.lp.userNavlable, "User Menu");
+		onClick(BaseTest.lp.logOut, "Log Out");
 		
-		
+		BaseTest.test.pass("Successfully logged out.");
 	}
 }

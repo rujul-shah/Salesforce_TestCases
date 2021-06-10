@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Listners.TestListners"/>
+  </listeners>
   <test name="Test(failed)">
     <parameter name="BrowserName" value="Chrome"/>
     <classes>
-      <class name="TestCases.Usermenudropdown">
+      <class name="TestCases.VerifyLogin">
         <methods>
           <include name="initReport"/>
-          <include name="testCase05" invocation-numbers="0"/>
           <include name="createReport"/>
           <include name="teardown"/>
+          <include name="closure"/>
+        </methods>
+      </class> <!-- TestCases.VerifyLogin -->
+      <class name="TestCases.UserAccount">
+        <methods>
+          <include name="TestCase11_CreateView" invocation-numbers="0"/>
+          <include name="createReport"/>
+          <include name="closure"/>
+        </methods>
+      </class> <!-- TestCases.UserAccount -->
+      <class name="TestCases.Usermenudropdown">
+        <methods>
+          <include name="createReport"/>
           <include name="closure"/>
         </methods>
       </class> <!-- TestCases.Usermenudropdown -->

@@ -24,7 +24,8 @@ public class CommonUtilities {
 	{
 		TakesScreenshot screenshot = (TakesScreenshot)BaseTest.driver;
 		String addDate = new SimpleDateFormat("yyyymmddhhmm").format(new Date());
-		String dstFilePath = "/screenshot/"+addDate+".PNG";
+		String dstFilePath = System.getProperty("user.dir") + "/Reports/screenshot/"+addDate+".PNG";
+	//	System.out.println("FilePath="+dstFilePath);
 		File sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
 		File destFile = new File(dstFilePath);
 		FileUtils.copyFile(sourceFile, destFile);

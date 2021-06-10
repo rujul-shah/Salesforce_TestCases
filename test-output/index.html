@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.UserAccount" class="method navigator-link" hash-for-method="TestCase11_CreateView(Today&#039;s view, TD1)">TestCase11_CreateView(Today's view, TD1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +116,47 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.Usermenudropdown" class="method navigator-link" hash-for-method="testCase05(Chrome)">testCase05(Chrome)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestCases.UserAccount" class="method navigator-link" hash-for-method="TestCase10_CreateAccount(Jinesh)">TestCase10_CreateAccount(Jinesh)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.VerifyLogin" class="method navigator-link" hash-for-method="testCase01(Chrome)">testCase01(Chrome)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.VerifyLogin" class="method navigator-link" hash-for-method="testCase02(Chrome)">testCase02(Chrome)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.VerifyLogin" class="method navigator-link" hash-for-method="testCase03(Chrome)">testCase03(Chrome)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.VerifyLogin" class="method navigator-link" hash-for-method="testCase04(Chrome)">testCase04(Chrome)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.Usermenudropdown" class="method navigator-link" hash-for-method="testCase05">testCase05</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.Usermenudropdown" class="method navigator-link" hash-for-method="testCase06(Shah)">testCase06(Shah)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.Usermenudropdown" class="method navigator-link" hash-for-method="testCase08_developerConsole">testCase08_developerConsole</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.Usermenudropdown" class="method navigator-link" hash-for-method="testCase09_Logout">testCase09_Logout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -117,6 +171,88 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.UserAccount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestCase11_CreateView(Today&#039;s view, TD1)">
+                  </a> <!-- TestCase11_CreateView(Today's view, TD1) -->
+                  <span class="method-name">TestCase11_CreateView</span>
+                  <span class="parameters">(Today's view, TD1)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@name=&apos;fcf&apos;]&quot;}
+  (Session info: chrome=91.0.4472.77)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-LHELV1T&apos;, ip: &apos;10.0.0.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\rujul\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f75d6783d259e873bde6cc55d04c93a4
+*** Element info: {Using=xpath, value=//select[@name=&apos;fcf&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.getTagName(Unknown Source)
+	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:45)
+	at TestCases.UserAccount.TestCase11_CreateView(UserAccount.java:53)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.VerifyLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase01(Chrome)">
+                  </a> <!-- testCase01(Chrome) -->
+                  <span class="method-name">testCase01</span>
+                  <span class="parameters">(Chrome)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase02(Chrome)">
+                  </a> <!-- testCase02(Chrome) -->
+                  <span class="method-name">testCase02</span>
+                  <span class="parameters">(Chrome)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase03(Chrome)">
+                  </a> <!-- testCase03(Chrome) -->
+                  <span class="method-name">testCase03</span>
+                  <span class="parameters">(Chrome)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase04(Chrome)">
+                  </a> <!-- testCase04(Chrome) -->
+                  <span class="method-name">testCase04</span>
+                  <span class="parameters">(Chrome)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -125,10 +261,47 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testCase05(Chrome)">
-                  </a> <!-- testCase05(Chrome) -->
+                  <a name="testCase05">
+                  </a> <!-- testCase05 -->
                   <span class="method-name">testCase05</span>
-                  <span class="parameters">(Chrome)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase06(Shah)">
+                  </a> <!-- testCase06(Shah) -->
+                  <span class="method-name">testCase06</span>
+                  <span class="parameters">(Shah)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase08_developerConsole">
+                  </a> <!-- testCase08_developerConsole -->
+                  <span class="method-name">testCase08_developerConsole</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase09_Logout">
+                  </a> <!-- testCase09_Logout -->
+                  <span class="method-name">testCase09_Logout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.UserAccount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestCase10_CreateAccount(Jinesh)">
+                  </a> <!-- TestCase10_CreateAccount(Jinesh) -->
+                  <span class="method-name">TestCase10_CreateAccount</span>
+                  <span class="parameters">(Jinesh)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,10 +316,15 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Listners.TestListners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;BrowserName&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;TestCases.VerifyLogin&quot;/&gt;
       &lt;class name=&quot;TestCases.Usermenudropdown&quot;/&gt;
+      &lt;class name=&quot;TestCases.UserAccount&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -160,7 +338,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,16 +364,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testCase05')
+data.setCell(0, 1, 'testCase06')
 data.setCell(0, 2, 'TestCases.Usermenudropdown')
-data.setCell(0, 3, 13716);
+data.setCell(0, 3, 46903);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TestCase11_CreateView')
+data.setCell(1, 2, 'TestCases.UserAccount')
+data.setCell(1, 3, 32737);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TestCase10_CreateAccount')
+data.setCell(2, 2, 'TestCases.UserAccount')
+data.setCell(2, 3, 16365);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testCase02')
+data.setCell(3, 2, 'TestCases.VerifyLogin')
+data.setCell(3, 3, 15986);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testCase03')
+data.setCell(4, 2, 'TestCases.VerifyLogin')
+data.setCell(4, 3, 13360);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testCase08_developerConsole')
+data.setCell(5, 2, 'TestCases.Usermenudropdown')
+data.setCell(5, 3, 11997);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testCase09_Logout')
+data.setCell(6, 2, 'TestCases.Usermenudropdown')
+data.setCell(6, 3, 8972);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testCase05')
+data.setCell(7, 2, 'TestCases.Usermenudropdown')
+data.setCell(7, 3, 8254);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testCase01')
+data.setCell(8, 2, 'TestCases.VerifyLogin')
+data.setCell(8, 3, 4396);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testCase04')
+data.setCell(9, 2, 'TestCases.VerifyLogin')
+data.setCell(9, 3, 3534);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -210,9 +424,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.Usermenudropdown</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initReport</span>
+                <br/>
+                <span class="ignored-method-name">teardown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.UserAccount</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initReport</span>
+                <br/>
+                <span class="ignored-method-name">teardown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -221,26 +453,145 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.Usermenudropdown</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestCases.VerifyLogin</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">createReport(public void TestCases.Usermenudropdown.testCase05(java.lang.String) throws java.io.IOException)</span>
-                <span class="method-start">250 ms</span>
+                <span class="method-name">createReport(public void TestCases.VerifyLogin.testCase01(java.lang.String) throws java.io.IOException, Chrome)</span>
+                <span class="method-start">298 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testCase05(Chrome)</span>
-                <span class="method-start">253 ms</span>
+                <span class="method-name">testCase01(Chrome)</span>
+                <span class="method-start">6096 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closure</span>
-                <span class="method-start">13971 ms</span>
+                <span class="method-start">10494 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">createReport(public void TestCases.VerifyLogin.testCase02(java.lang.String) throws java.lang.Exception, Chrome)</span>
+                <span class="method-start">13971 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase02(Chrome)</span>
+                <span class="method-start">18322 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closure</span>
+                <span class="method-start">34312 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">createReport(public void TestCases.VerifyLogin.testCase03(java.lang.String) throws java.io.IOException,java.lang....)</span>
+                <span class="method-start">37616 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase03(Chrome)</span>
+                <span class="method-start">40270 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closure</span>
+                <span class="method-start">53631 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">createReport(public void TestCases.VerifyLogin.testCase04(java.lang.String) throws java.io.IOException,java.lang....)</span>
+                <span class="method-start">56926 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase04(Chrome)</span>
+                <span class="method-start">59441 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closure</span>
+                <span class="method-start">62979 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.Usermenudropdown</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">createReport(public void TestCases.Usermenudropdown.testCase05() throws java.io.IOException, Chrome)</span>
+                <span class="method-start">66239 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase05</span>
+                <span class="method-start">68999 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closure</span>
+                <span class="method-start">77254 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">createReport(public void TestCases.Usermenudropdown.testCase06(java.lang.String) throws java.io.IOException,java....)</span>
+                <span class="method-start">80742 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase06(Shah)</span>
+                <span class="method-start">83651 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closure</span>
+                <span class="method-start">130556 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">createReport(public void TestCases.Usermenudropdown.testCase08_developerConsole() throws java.io.IOException, Chr...)</span>
+                <span class="method-start">133799 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase08_developerConsole</span>
+                <span class="method-start">136119 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closure</span>
+                <span class="method-start">148118 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">createReport(public void TestCases.Usermenudropdown.testCase09_Logout() throws java.io.IOException, Chrome)</span>
+                <span class="method-start">151121 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase09_Logout</span>
+                <span class="method-start">153800 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closure</span>
+                <span class="method-start">162773 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.UserAccount</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">createReport(public void TestCases.UserAccount.TestCase10_CreateAccount(java.lang.String) throws java.io.IOExcept...)</span>
+                <span class="method-start">166051 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestCase10_CreateAccount(Jinesh)</span>
+                <span class="method-start">168573 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closure</span>
+                <span class="method-start">184940 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">createReport(public void TestCases.UserAccount.TestCase11_CreateView(java.lang.String,java.lang.String) throws ja...)</span>
+                <span class="method-start">188260 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TestCase11_CreateView(Today's view, TD1)</span>
+                <span class="method-start">190899 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closure</span>
+                <span class="method-start">224135 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.VerifyLogin</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">19276 ms</span>
+                <span class="method-start">227433 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

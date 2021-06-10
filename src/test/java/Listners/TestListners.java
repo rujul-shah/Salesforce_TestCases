@@ -16,7 +16,14 @@ public class TestListners extends BaseTest implements ITestListener{
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("In Start Test");
+		try {
+			
+			objCommon.takeScreenshot();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -28,7 +35,9 @@ public class TestListners extends BaseTest implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
+		System.out.println("In Listner");
 		try {
+			
 			objCommon.takeScreenshot();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

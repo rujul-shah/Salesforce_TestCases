@@ -2,6 +2,7 @@ package TestCases;
 
 import java.io.IOException;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -15,12 +16,12 @@ public class VerifyLogin extends BaseTest {
 	
 	
 	@Parameters({"BrowserName"})
-	@Test(priority=0)
+	@Test(priority=0, dataProvider = "")
 	public void testCase01(String sBrowserName) throws IOException
 	{
 		
-		sa=new SoftAssert();
-		driver=getBrowser(sBrowserName);
+		//sa=new SoftAssert();
+	//	driver=getBrowser(sBrowserName);
 		lp=new loginPage(driver);
 		objCommon.enterText(lp.username,objData.ReadExcelData()[0],"Username");
 		lp.password.clear();
@@ -28,30 +29,30 @@ public class VerifyLogin extends BaseTest {
 		objCommon.waitForElement(lp.error);
 		sa.assertEquals(lp.error.getText(), "Please enter your password.");
 		test.pass("Test Case01 Passed.");
-		sa.assertAll();
+		//sa.assertAll();
 	}
 	
 	@Parameters({"BrowserName"})
 	@Test
 	public void testCase02(String sBrowserName) throws Exception
 	{
-		sa = new SoftAssert();
-		driver=getBrowser(sBrowserName);
+	//	sa = new SoftAssert();
+		//driver=getBrowser(sBrowserName);
 		lp=new loginPage(driver);
 		objCommon.login();
 		Thread.sleep(10000);
 		sa.assertEquals(driver.getTitle().trim(), "Home Page ~ Salesforce - Developer Edition");
 		System.out.println(driver.getTitle());
 		test.info("Login Success");
-		sa.assertAll();
+	//	sa.assertAll();
 	}
 	
 	@Parameters({"BrowserName"})
 	@Test
 	public void testCase03(String sBrowserName) throws IOException, InterruptedException
 	{
-		sa=new SoftAssert();
-		driver=getBrowser(sBrowserName);
+		//sa=new SoftAssert();
+		//driver=getBrowser(sBrowserName);
 		lp=new loginPage(driver);
 		objCommon.waitForElement(lp.rememberMe);
 		objCommon.onClick(lp.rememberMe, "Remember ME");
@@ -62,14 +63,15 @@ public class VerifyLogin extends BaseTest {
 		objCommon.waitForElement(lp.username);
 		if(lp.rememberMe.isSelected())
 			test.pass("Testcase 3 success");
+		//sa.assertAll();
 	}
 	
 	@Parameters({"BrowserName"})
 	@Test
 	public void testCase04(String sBrowserName) throws IOException, InterruptedException
 	{
-		sa=new SoftAssert();
-		driver=getBrowser(sBrowserName);
+		//sa=new SoftAssert();
+		//driver=getBrowser(sBrowserName);
 		lp=new loginPage(driver);
 		objCommon.waitForElement(lp.forgotPassword);
 		objCommon.onClick(lp.forgotPassword, "Forgot Password");
@@ -79,7 +81,7 @@ public class VerifyLogin extends BaseTest {
 		String str1="We’ve sent you an email with a link to finish resetting your password.";
 		sa.assertEquals(lp.fMessage.getText(), str1);
 		test.pass("Testcase 4 success");
-		
+		//sa.assertAll();
 	}
 	
 

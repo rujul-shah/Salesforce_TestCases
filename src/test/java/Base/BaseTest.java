@@ -1,4 +1,4 @@
-package Base;
+ package Base;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +18,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -87,16 +88,31 @@ public class BaseTest {
 	{
 		report.flush();
 	}
+	@Parameters({"BrowserName"})
 	@BeforeMethod
-	public void createReport(Method sMethodName)
+	public void createReport(Method sMethodName, String sBrowserName) throws IOException
 	{
+		driver=getBrowser(sBrowserName);
 		test=report.createTest(sMethodName.getName());
+		sa=new SoftAssert();
 	}
 	@AfterMethod
 	public void closure() throws Exception
 	{
-		Thread.sleep(5000);
-		driver.close();
+		//sa.assertAll();
+		Thread.sleep(3000);
+		try 
+		{
+		
+			if(driver.getTitle() != null)
+			{
+				driver.close();
+			}
+		}
+		catch(Exception e)
+		{
+		}
+		
 	}
 	
 }
